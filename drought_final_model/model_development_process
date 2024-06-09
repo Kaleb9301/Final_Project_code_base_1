@@ -1,0 +1,39 @@
+digraph {
+	A [label="Data Preprocessing"]
+	A1 [label="Read Dataset"]
+	A2 [label="Select Relevant Columns"]
+	A3 [label="Fix Specific Data Points"]
+	A4 [label="Check for Null Values"]
+	A5 [label="Drop Rows with Nulls"]
+	A1 -> A
+	A2 -> A
+	A3 -> A
+	A4 -> A
+	A5 -> A
+	B [label="Feature Scaling"]
+	B1 [label="Split Data into Features and Labels"]
+	B2 [label="Scale Features using MinMaxScaler"]
+	B1 -> B
+	B2 -> B
+	C [label="Training Data Generator"]
+	D [label="Testing Data Generator"]
+	E [label="Model Development"]
+	E1 [label="Define LSTM Model"]
+	E2 [label="Compile Model"]
+	E3 [label="Train Model with Training Data"]
+	E1 -> E
+	E2 -> E
+	E3 -> E
+	F [label="Prediction and Evaluation"]
+	F1 [label="Predict on Test Data"]
+	F2 [label="Inverse Transform Predictions"]
+	F3 [label="Visualize Predictions"]
+	F1 -> F
+	F2 -> F
+	F3 -> F
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+}
